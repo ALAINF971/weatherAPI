@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+    <div class="row">
+        <header class="col-xs-12 text-center">
+            <h1><i id="sun" class="wi wi-day-sunny"></i><i id="sunCloud" class="wi wi-day-cloudy"></i> Local Weather Page <i id="ice" class="wi wi-hail"></i><i id="snow" class="wi wi-day-snow"></i></h1>
+        </header>
+    </div>
+    <div class="row">
+        <div  id="chooseCity">
+            <br>
+            <div class="form-group col-xs-4">
+                <input id="q" name="q" class="form-control border-color"  placeholder="Your city name" data-original-title="" title="" type="text">
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="getLocation();"><i class="fa fa-question-circle"></i> Search</button>
+        </div>
+    </div>
+
+
+    <div class="weather-app">
+        <div class="left">
+            <div class="temperature"><span id="temperature">0</span></div>
+            <div class="location"><span id="location"></span></div>
+        </div>
+        <div class="right">
+            <div class="top">
+                <img id="icon" width="100px" src="images/codes/200.png"/>
+            </div>
+            <div class="botton">
+                <div class="humidity">
+                    <img src="images/icons/humidity.png" height="20px"/>
+                    <span id="humidity">0</span>%
+                </div>
+                <div class="wind">
+                    <span id="wind">0</span> kph <span id="direction"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weather-app-bottom">
+        <div class="descriptions">
+           <strong>Current Date:  </strong><span id="currentDate"></span><br/>
+           <strong>Description:  </strong><span id="descriptions"></span><br/>
+           <strong>Pression:  </strong><span id="pressions"></span><br/>
+           <strong>Max Temperature:  </strong><span id="maxTemp"></span><br/>
+           <strong>Min Temperature:  </strong><span id="minTemp"></span><br/>
+           <strong>Sun Rise:  </strong><span id="sunrise"></span><br/>
+           <strong>Sun Set:  </strong><span id="sunset"></span>
+        </div>
+    </div>
+    <div id="footer">Copyright 2016, Alain Fallara</div>
+</body>
+</html>
